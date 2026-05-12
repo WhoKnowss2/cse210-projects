@@ -1,0 +1,30 @@
+Class: Person
+Attributes:
+* _givenName : string
+* _familyName : string
+
+Behaviors:
+* ShowEasternName() : void
+* ShowWesternName() : void
+
+--
+
+Class: Resume
+Attributes:
+* _name : string
+* _jobs : List<job>
+
+Behaviors:
+* Display() : void
+
+--
+
+Class: Job  
+Attributes:
+* _company : string
+* _jobTitle : string
+* _startYear : int
+* _endYear : int
+
+Behaviors:
+* Display : void
