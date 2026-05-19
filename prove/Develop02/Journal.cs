@@ -31,22 +31,23 @@ public class Journal
     }
 
     public void ReadFromFile(string filename)
+{
+    _entries.Clear();
+
+    string[] lines = File.ReadAllLines(filename);
+
+    foreach (string line in lines)
     {
-        string[] lines = File.ReadAllLines(filename);
+        string[] parts = line.Split("|", 3);
 
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split("#");
+        string date = parts[0];
+        string prompt = parts[1];
+        string response = parts[2];
 
-            string date = parts[0];
-            string prompt = parts[1];
-            string response = parts[2];
+        JournalEntry entry = new JournalEntry(date, prompt, response);
 
-            JournalEntry entry = new JournalEntry();
-            entry.CreateJournalEntry(date, prompt, response);
-
-            AddEntry(entry);
-        }
+        AddEntry(entry);
     }
+}
 }
  
