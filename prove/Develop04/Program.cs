@@ -1,7 +1,7 @@
 // EXCEEDS REQUIREMENTS:
-// 1. Added randomized motivational ending messages to enhance user experience.
-// 2. Reflection activity uses random, non-repeating questions for higher variety and polish.
-// 3. Added menu input validation to handle invalid choices and improve program robustness.
+// 1. I added randomized motivational ending messages to make the activities feel more encouraging.
+// 2. The Reflection activity uses random, non‑repeating questions so the experience feels more natural and varied.
+// 3. I included menu input validation so the program handles invalid choices instead of crashing or continuing incorrectly.
 
 
 using System;
